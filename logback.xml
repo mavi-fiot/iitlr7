@@ -1,0 +1,14 @@
+<configuration>
+    <appender name="FLUENT" class="ch.qos.logback.more.appenders.DataFluentdAppender">
+        <remoteHost>127.0.0.1</remoteHost>
+        <port>24224</port>
+        <tag>telegram.bot</tag>
+        <encoder>
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="debug">
+        <appender-ref ref="FLUENT"/>
+    </root>
+</configuration>
